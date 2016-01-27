@@ -1,0 +1,37 @@
+.left-block {
+	float: left;
+	width: 330px;
+	margin-top: 10px;
+}
+
+.top-sort-block {
+	border: 1px solid #dee1e4;
+	background: #dee1e4;
+	@include border-radius(5px);
+	overflow: hidden;
+	margin-bottom: 45px;
+}
+
+.top-sort-block__item { 
+    background: white;
+    border-bottom: 1px solid #dee1e4;
+	&:hover {
+		background: #d9e5ea;
+	}
+
+	&:last-child {
+		border-bottom: 0px solid #dee1e4;
+	}
+}
+
+.top-sort-block__link {
+	display: block;
+	width: 270px;
+	padding: 14px 30px;
+	text-decoration: none;
+	font-family: 'opensans-regular';
+	font-size: 0.9em;
+	color: #5d656c;
+	@include border-radius(5px);
+	overflow: hidden;
+}

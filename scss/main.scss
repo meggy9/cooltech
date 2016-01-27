@@ -1,0 +1,60 @@
+html, body{
+	height: 100%;
+	width: 100%;
+}
+
+.wrapper {
+	max-width: 1256px;
+    margin: 0 auto;
+}
+.common-wrapper {
+	width: 1256px;
+	min-height: 1800px;
+	background: #f4f4f4;
+}
+
+.inner-wrapper {
+	width: 1100px;
+	margin: 0 auto;
+
+	&:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+}
+
+.content-wrapper {
+	margin: 10px 0 0 27px;
+	float: right;
+}
+
+ul {
+	list-style-type: none;
+	@extend %margin-padding-0;
+}
+
+
+//--------Mixins---------//
+
+@mixin border-radius ($value){
+	-webkit-border-radius: $value;
+	-moz-border-radius: $value;
+	-ms-border-radius: $value;
+	-o-border-radius: $value;
+	border-radius: $value;
+}
+
+
+@import "includes/_header.scss";
+@import "includes/_nav-appliances.scss";
+@import "includes/_crumbs.scss";
+@import "includes/_left-block.scss";
+@import "includes/_presence.scss";
+@import "includes/_sortby.scss";
+@import "includes/_content.scss";
+@import "../font-awesome-4.5.0/scss/font-awesome.scss";
+@import "includes/_important-information.scss";
+@import "includes/_footer.scss";
+@import "includes/_normalize.scss";
+@import "includes/_fonts.scss";

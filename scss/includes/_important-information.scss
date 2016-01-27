@@ -1,0 +1,27 @@
+.important-info {
+	background: #f4f4f4;
+	width: 1256px;
+	margin: 0 auto;
+	margin-top: -20px;
+}
+
+.important-info__header {
+	font-family: 'opensans-bold';
+}
+
+.important-info__left-block {
+	float: left;
+	width: 48%;
+}
+
+.important-info__right-block {
+	float: right;
+	width: 48%;
+}
+
+.important-info__paragraph {
+	text-indent: 1.7em;
+	text-align: justify;
+	font-size: 0.9em;
+	font-family: 'opensans-regular';
+}

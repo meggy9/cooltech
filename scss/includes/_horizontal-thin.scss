@@ -1,0 +1,138 @@
+.list-of-products-horizontal-thin {
+	display: none;
+
+	border-radius: 5px 5px 5px 5px;
+	-moz-border-radius: 5px 5px 5px 5px;
+	-webkit-border-radius: 5px 5px 5px 5px;
+	border: 1px solid #dee1e4;
+
+	overflow: hidden;
+	}
+
+li.list-of-products-horizontal-thin__list {
+	border-collapse: collapse;
+}
+
+li.list-of-products-horizontal-thin__item {
+	display: inline-flex;
+	align-items: baseline;
+	width: 740px;
+	background: #fbfbfb;
+	border-bottom: 1px solid #dee1e4;
+
+	&:hover {
+		-webkit-box-shadow: 0px 0px 7px 1px rgba(197,200,203,0.73);
+		-moz-box-shadow: 0px 0px 7px 1px rgba(197,200,203,0.73);
+		box-shadow: 0px 0px 7px 1px rgba(197,200,203,0.73);
+	}
+	
+	&:last-child {
+		border-bottom: 0px solid #dee1e4;
+	}
+
+	&:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+
+	.vendor-code, .vendor-code-number, 
+	.device-type, .product-name,
+	.product-price, .currency {
+	}
+}
+
+.vendor-code, .vendor-code-number, 
+.device-type, .product-name,
+.product-price, .currency {
+	margin-left: 5px;
+}
+
+.product-price {
+	font-family: 'opensans-semibold';
+	font-size: 1.2em;
+}
+
+.vendor-code {
+	margin-left: 10px;
+	color: #898989;
+	font-family: 'opensans-bold';
+	font-size: 0.8em;
+}
+
+.vendor-code-number {
+	margin-left: 5px;
+	color: #333;
+	font-family: 'opensans-semibold';
+	font-size: 0.9em;
+}
+
+.device-type {
+	font-family: 'opensans-regular';
+}
+
+.product-name {
+	width: 230px;
+	height: 25px; 
+	font-family: 'opensans-regular';
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.availability {
+	position: relative;
+	padding: 16px 0;
+	margin-left: 25px;
+	font-family: 'opensans-bold';
+	font-size: 0.8em; 
+	color: #898989;
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 22px;
+		left: -13px;
+		width: 6px;
+		height: 6px;
+		background: #60ac49;
+
+	&:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+
+		border-radius: 3px 3px 3px 3px;
+		-moz-border-radius: 3px 3px 3px 3px;
+		-webkit-border-radius: 3px 3px 3px 3px;
+		border: 0px solid #000000;
+	}
+}
+
+.to-the-basket {
+	margin-left: 5px;
+	padding: 8px 0;
+}
+
+.to-the-basket__button {
+	display: block;
+	font-family: 'opensans-bold';
+	font-size: 0.9em;
+	color: #fff;
+	text-decoration: none;
+	padding: 6px 12px;
+	text-align: center;
+	background: #ff6602;
+	
+	border-radius: 5px 5px 5px 5px;
+	-moz-border-radius: 5px 5px 5px 5px;
+	-webkit-border-radius: 5px 5px 5px 5px;
+	border: 0px solid #000000;	
+}
+
+
+
+
+
+
+

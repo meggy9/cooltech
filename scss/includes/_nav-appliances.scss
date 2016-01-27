@@ -1,0 +1,45 @@
+.appliances {
+	background: white;
+	width: 1256px;
+	margin: 0 auto;
+}
+
+.appliances__list {
+	@extend %margin-padding-0;
+	list-style-type: none;
+
+	.appliances__item {
+		display: inline-block;
+		vertical-align: middle;
+		text-align: center;
+		margin-left: -4px;
+    
+		&:hover {
+			background: #e4e2e2;
+		}
+
+		.appliances__link {
+			display: block;
+			padding: 15px 13px;
+			text-decoration: none;
+			font-family: 'opensans-semibold';
+			color: #333;
+		}
+    }
+
+	.appliances__item-active {
+		display: inline-block;
+		vertical-align: middle;
+		text-align: center;
+		margin-left: -4px;
+		background: #ff6e35;
+
+		.appliances__link {
+			display: block;
+			padding: 15px 13px;
+			text-decoration: none;
+			font-family: 'opensans-semibold';
+			color: #fff;
+		}
+	}
+}

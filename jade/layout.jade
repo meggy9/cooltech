@@ -1,0 +1,28 @@
+doctype html
+html
+	head
+		meta(http-equiv="Content-type", content="text/html; charset=utf-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=Edge")
+		title Portfolio
+		script(src="../bower_components/modernizr/modernizr.js")
+		script(src="../bower_components/jquery/dist/jquery.js")
+		script(src="../bower_components/jquery-ui-1.11.4/jquery-ui.js")
+		link(rel="stylesheet", href="../css/main.css", type="text/css")
+
+	body
+		.wrapper
+			include includes/header_first.jade
+			include includes/header_second.jade
+			include includes/nav_appliances.jade
+			.common-wrapper
+				.inner-wrapper
+					include includes/crumbs.jade
+					.left-block
+						include includes/top_left_block.jade
+						include includes/presence.jade
+					.content-wrapper
+						include includes/sortby.jade
+						include includes/content.jade
+			include includes/important_information.jade
+			include includes/footer.jade
+	script(src="../js/main.js")

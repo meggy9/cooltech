@@ -1,0 +1,103 @@
+footer {
+	position: relative;
+	min-height: 220px;
+	background: url(../images/footer.png) no-repeat;
+
+	.inner-wrapper {
+		position: relative;
+		height: 100%;
+	}
+}
+
+.footer-logo {
+	position: absolute;
+	top: 72px;
+	left: 0;
+	@include sprite-sprite(logo_footer);
+	width: sprite-sprite-width(logo_footer);
+	height: sprite-sprite-height(logo_footer);
+}
+
+.footer-social {
+	position: absolute;
+	top: 35px;
+	right: 3px;
+
+	.footer-social__item {
+		display: inline-block;
+		position: relative;
+		height: 43px;
+		width: 40px;
+		@include border-radius(50%);
+		margin-left: 26px;
+		background: #fff;
+
+		.footer-social__item-link {
+			display: block;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			margin: auto;
+		}
+
+		$sprite: fb_footer, vk_footer, tw_footer;
+
+		@each $item in $sprite {
+		.footer-social__item-link-#{$item} {
+			@include sprite-sprite($item);
+			width: sprite-sprite-width($item);
+			height: sprite-sprite-height($item);
+		}
+		}
+	}
+}
+
+.footer-navigation {
+	float: right;
+	margin-top: 109px;
+	width: 600px;
+}
+
+.footer-navigation__list {
+	&:after {
+		content: "";
+		display: block;
+		clear: both;
+	}	
+}
+
+.footer-navigation__item {
+	display: inline-block;
+	float: right;
+	margin: 0px 0px 18px 24px;
+
+	&:nth-child(3) {
+		margin-left: 188px;
+	}
+
+	&:after {
+		content: "";
+		display: block;
+		clear: both;
+	}	
+}
+
+.footer-navigation__item-link {
+	font-family: 'opensans-regular';
+	font-size: 0.9em;
+	color: #fff;
+}
+
+.footer__copyright {
+	width: 1256px;
+	margin-top: 10px;
+	padding: 10px 300px;
+	box-sizing:  border-box;
+	font-family: 'opensans-regular';
+	font-size: 0.7em;
+	text-align: center;
+	border-top: 1px solid #494949;
+	color: #fff;
+}

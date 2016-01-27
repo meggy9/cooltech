@@ -1,0 +1,28 @@
+.crumbs {
+	margin-top: 29px;	
+}
+
+.crumbs-nav__link {
+	display: inline-block;
+	text-decoration: none;	
+	font-family: 'opensans-regular';
+	font-size: 15px;
+	color: #f60;
+	border-bottom: 1px solid #f60;
+}
+
+.crumbs-nav__link-active {
+	font-size: 15px;
+	color: #333;
+	border-bottom: 1px solid transparent;
+}
+
+.crumbs-nav__arrow {
+	display: inline-block;
+	font-size: 15px;
+	color: #333;
+}
+
+.nav-appliances-section-name {
+	font-family: 'opensans-bold';
+}

@@ -1,0 +1,137 @@
+.list-of-products-vertical__item {
+	display: inline-block;
+	width: 208px;
+	min-height: 513px;
+	margin: 0 0 19px 16px;
+	padding: 19px 13px;
+	background: #fbfbfb;
+
+	&:nth-child(3n+1) {
+		margin-left: 0;
+	}
+
+	&:hover {
+		-webkit-box-shadow: 0px 0px 7px 1px rgba(197,200,203,0.73);
+		-moz-box-shadow: 0px 0px 7px 1px rgba(197,200,203,0.73);
+		box-shadow: 0px 0px 7px 1px rgba(197,200,203,0.73);
+	}
+
+	.product-header {
+		padding: 0 5px;
+		margin: 0 auto;
+		font-family: 'opensans-semibold';
+		font-size: 0.9em;
+		text-align: center;
+	}
+
+	.product-price, .product-rating {
+		float: none;
+		display: block;
+		text-align: center;
+		padding: 0;
+		margin-bottom: 8px;
+	}
+
+	.to-the-basket {
+		float: right;
+	}
+
+	.availability {
+		float: left;
+		margin-left: 18px;
+	}
+}
+
+.product-images-gallery {
+		margin: 0 auto;
+		text-align: center;
+
+		.device-main-image {
+			position: relative;
+			width: 136px;
+			height: 136px;
+			margin: 0 auto;
+			margin-bottom: 15px;
+			background: #fff;
+			box-sizing: border-box;
+			border: 1px solid #dee1e4;
+			@include border-radius(3px);
+
+			.main-image {
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				margin: auto;
+				max-width: 130px;
+				max-height: 130px;
+			}
+		}
+
+		.product-images-gallery__list {
+			margin: 0 auto;
+			max-height: 34px;
+		}
+
+		.product-images-gallery__item {
+			display: inline-block;
+			position: relative;
+			width: 32px;
+			height: 32px;
+			margin-left: 13px;
+			border: 1px solid #dee1e4;
+			@include border-radius(3px);
+			background: #fff;
+			cursor: pointer;
+
+			.small-image {
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				height: 100%;
+				margin: auto;
+			}
+
+			&:first-child {
+				margin-left: 0px;
+			}
+
+			&:hover {
+				border: 1px solid #ff6600;
+			}
+		}
+	}
+
+.vertical-product-description__list {
+	margin-bottom: 8px;
+}
+
+.vertical-product-description__item {
+	height: 20px;
+	font-family: 'opensans-regular';
+	font-size: 0.9em;
+	&:after {
+		content:"";
+		display: block;
+		clear: both;
+	}
+
+	&:nth-child(odd) {
+		background: #e6e6e6;
+	}
+}
+
+.product-description-property {
+	display: inline-block;
+	float: left;
+}
+
+.product-description-property-value {
+	padding-left: 10px;
+	display: inline-block;
+	float: right;
+	vertical-align: bottom;
+}

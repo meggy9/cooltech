@@ -1,0 +1,153 @@
+$sprite-layout: horizontal;
+$sprite-spacing: 70px;
+
+@import "sprite/*.png";
+
+.sortby {
+	background: #e4ebee;
+	height: 53px;
+	margin-bottom: 20px;
+	border-radius: 5px 5px 5px 5px;
+	-moz-border-radius: 5px 5px 5px 5px;
+	-webkit-border-radius: 5px 5px 5px 5px;
+	border: 1px solid #dee1e4;
+	
+	&:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+}
+
+.sortby__select {
+	float: left;
+}
+
+$select-width: 144px;      //Ширина поля и выпадающего списка
+$select-background: #fff;
+
+.sortby__select_label {
+	display: inline-block;
+	padding: 16px 0 18px 0;
+	margin-left: 20px;	
+	font-family: 'opensans-regular';
+	font-size: 0.9em;
+}
+
+.sortby__select_field {
+	font-family: 'opensans-light';
+	font-size: 0.9em;
+	padding-right: 13px;
+	position: relative;
+
+	.sort-arrow {
+		position: absolute;
+		right: 6px;
+		top: 6px;
+		@include sprite-sprite(sort-arrow);
+		height: sprite-sprite-height(sort-arrow);
+		width: sprite-sprite-width(sort-arrow);
+		-ms-transform: rotate(0deg);
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+		transition: 300ms;
+	}
+}
+
+.sortby__select_block {
+	display: inline-block;
+	position: relative;
+	width: $select-width;
+	cursor: pointer;
+	margin: 0 0 0 10px;
+	background: $select-background;
+
+	border-radius: 2px 2px 2px 2px;
+	-moz-border-radius: 2px 2px 2px 2px;
+	-webkit-border-radius: 2px 2px 2px 2px;
+	border: 0px solid #000000;
+	border-top: 2px solid #ddd;
+
+	
+}
+
+.sortby__select_list{
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 30px;
+	width: $select-width;
+	background: $select-background;
+	
+	-webkit-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.4);
+	-moz-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.4);
+	box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.4);
+
+	border-radius: 2px 2px 2px 2px;
+	-moz-border-radius: 2px 2px 2px 2px;
+	-webkit-border-radius: 2px 2px 2px 2px;
+	border: 0px solid #000000;
+}
+
+.sortby__select_item {
+	font-family: 'opensans-light';
+	font-size: 0.9em;
+	cursor: pointer;
+}
+
+
+//**************Блок отображения вида каталога*****************
+
+.sortby__view {
+	float: right;
+
+	&:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+}
+
+.sortby__view_label {
+	float: left;
+	padding: 17px 0;
+	font-family: 'opensans-regular';
+	font-size: 0.9em;
+}
+
+.sortby__view_list-block {
+	display: inline-block;
+	float: right;
+	margin-left: 15px;
+}
+
+.sortby__view_item {
+	position: relative;
+	display: inline-block;
+	margin: 17px;
+
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		left: -17px;
+		top: -17px;
+		width: 1px;
+		background: #dee1e4;
+		height: 50px;
+	}
+
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+$lists: wide, vertical, thin;
+
+@each $item in $lists {
+	.sortby__view_item-#{$item} {
+		@include sprite-sprite($item);
+		width: sprite-sprite-width($item);
+		height: sprite-sprite-height($item);
+	}
+}

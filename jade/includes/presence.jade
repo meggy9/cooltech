@@ -1,0 +1,78 @@
+.presence
+	form.presence_form
+		ul.presence__list
+			li.presence__item
+				h3.presence__item-header.accord-arrow-header Наличие в магазинах
+					.accord-arrow#accord-arrow
+				.presence__item-block
+					ul.presence__item-block__list
+						li.presence__item-block__item.input-radio
+							input(type="radio" id="all-stores").presence-radio-button
+							label(for="all-stores") Во всех магазинах
+						li.presence__item-block__item.input-radio
+							input(type="radio" id="nearby-store").presence-radio-button
+							label(for="nearby-store") В близжайшем ко мне магазине
+			li.presence__item
+				h3.presence__item-header Бренды
+				.presence__item-block
+					ul.presence__item-block__list
+						li.presence__item-block__item
+							input(id="brand_1", type="checkbox")
+							label(for="brand_1") Lenovo
+						li.presence__item-block__item
+							input(id="brand_2", type="checkbox")
+							label(for="brand_2") Apple
+						li.presence__item-block__item
+							input(id="brand_3", type="checkbox")
+							label(for="brand_3") Samsung
+						li.presence__item-block__item
+							input(id="brand_4", type="checkbox")
+							label(for="brand_4") Asus
+						li.presence__item-block__item
+							input(id="brand_5", type="checkbox")
+							label(for="brand_5") Motorola
+					span.clear-filter Сбросить фильтр
+			li.presence__item
+				h3.presence__item-header Цена
+				.presence__item-block
+					label(for="from").first-label.presence__item-label От
+					input(id="from").presence__item-input
+					label(for="to").presence__item-label До
+					input(id="to").presence__item-input
+					.presence__item-slider
+			li.presence__item
+				h3.presence__item-header Цвет
+				.presence__item-block
+					ul.presence__item-color__list
+						li.presence__item-color__item.color-item-white
+						li.presence__item-color__item.color-item-grey
+						li.presence__item-color__item.color-item-black
+						li.presence__item-color__item.color-item-dark-blue
+						li.presence__item-color__item.color-item-red
+						li.presence__item-color__item.color-item-yellow
+						li.presence__item-color__item.color-item-orange
+						li.presence__item-color__item.color-item-green
+						li.presence__item-color__item.color-item-blue
+						li.presence__item-color__item.color-item-purple
+						li.presence__item-color__item.color-item-pink
+						li.presence__item-color__item.color-item-brown
+			li.presence__item
+				h3.presence__item-header Операционные системы
+				.presence__item-block
+					ul.presence__item-block__list
+						li.presence__item-block__item
+							input(id="os_1", type="checkbox")
+							label(for="os_1") Android
+						li.presence__item-block__item
+							input(id="os_2", type="checkbox")
+							label(for="os_2") iOS
+						li.presence__item-block__item
+							input(id="os_3", type="checkbox")
+							label(for="os_3") Windows Mobile
+						li.presence__item-block__item
+							input(id="os_4", type="checkbox")
+							label(for="os_4") Symbian
+						li.presence__item-block__item
+							input(id="os_5", type="checkbox")
+							label(for="os_5") Custom
+					span.clear-filter Сбросить фильтр

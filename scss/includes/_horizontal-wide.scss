@@ -1,0 +1,152 @@
+.list-of-products-horizontal-wide {
+	display: none;
+
+	border: 1px solid #dee1e4;
+	border-radius: 3px 3px 3px 3px;
+	-moz-border-radius: 3px 3px 3px 3px;
+	-webkit-border-radius: 3px 3px 3px 3px;
+}
+
+.list-of-products-horizontal-wide__item {
+	padding: 18px 22px;
+	background: #fbfbfb;
+	border-bottom: 1px solid #dee1e4;
+
+	&:hover {
+		-webkit-box-shadow: 0px 0px 7px 1px rgba(197,200,203,0.73);
+		-moz-box-shadow: 0px 0px 7px 1px rgba(197,200,203,0.73);
+		box-shadow: 0px 0px 7px 1px rgba(197,200,203,0.73);
+	}
+
+	&:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+
+	&:last-child {
+		border-bottom: 0px solid #dee1e4;
+	}
+
+	.vendor-code, .vendor-code-number {
+		float: left;
+		padding-top: 0px;
+		margin-top: 8px;
+	} 
+
+}
+
+.horizontal-wide__left-part, 
+.horizontal-wide__central-part, 
+.horizontal-wide__right-part  {
+	float: left;
+}
+
+
+//************Левый подблок horizontal-wide
+
+.horizontal-wide__left-part {
+	width: 138px;
+}
+
+
+//************Центральный подблок horizontal-wide
+
+.product-header {
+	margin-top: 0px;
+	font-family: 'opensans-semibold';
+}
+
+.horizontal-wide__central-part {
+	position: relative;
+	width: 370px;
+	height: 203px;
+	margin-left: 20px;
+	padding: 8px 0px;
+
+	&:after {
+		position: absolute;
+		right: -40px;
+		top: 0;
+		content: "";
+		display: block;
+		float: left;
+		width: 1px;
+		height: 203px;
+		margin-left: 40px;
+		background: #dee1e4;
+	}
+}
+
+.product-description {
+	font-family: 'opensans-regular';
+	font-size: 0.9em;
+}
+
+.product-rating {
+	margin-top: 15px;
+
+	&:after {
+		content: "4";
+		display: inline-block;
+		width: 32px;
+		height: 17px;
+		text-align: center;
+		color: #fbfbfb;
+		margin-left: 13px;
+		background: #c4cbd4;
+
+		border-radius: 9px 9px 9px 9px;
+		-moz-border-radius: 9px 9px 9px 9px;
+		-webkit-border-radius: 9px 9px 9px 9px;
+		border: 0px solid #000000;
+	}
+}
+
+.star {
+	display: inline-block;
+	@include sprite-sprite(star);
+	height: sprite-sprite-height(star);
+	width: sprite-sprite-width(star);
+
+	&:hover {
+		@include sprite-sprite(star-active);
+	}
+}
+
+.star.active {
+	display: inline-block;
+	@include sprite-sprite(star-active);
+	height: sprite-sprite-height(star-active);
+	width: sprite-sprite-width(star-active);
+}
+
+
+//************Правый подблок horizontal-wide
+
+.horizontal-wide__right-part {
+	width: 125px;
+	margin-left: 40px;
+
+	.product-price, .currency, .to-the-basket {
+		float: right;
+		padding: 0;
+	}
+
+	.availability {
+		float: right;
+		padding: 0;
+		&:before {
+			top: 6px;
+		}
+	}
+
+	.product-price, .currency {
+		float: right;
+		margin-bottom: 130px;
+	}
+
+	.to-the-basket {
+		margin-bottom: 8px;
+	}
+}
